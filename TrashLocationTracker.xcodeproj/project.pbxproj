@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAE9BECB29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BECA29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift */; };
+		AAE9BECD29C95D5A00D4D2E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BECC29C95D5A00D4D2E0 /* ContentView.swift */; };
+		AAE9BECF29C95D5B00D4D2E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE9BECE29C95D5B00D4D2E0 /* Assets.xcassets */; };
+		AAE9BED229C95D5B00D4D2E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE9BED129C95D5B00D4D2E0 /* Preview Assets.xcassets */; };
+		AAE9BED929C95D7D00D4D2E0 /* MultiTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BED829C95D7D00D4D2E0 /* MultiTabView.swift */; };
+		AAE9BEDB29C95DA300D4D2E0 /* WebViewCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEDA29C95DA300D4D2E0 /* WebViewCore.swift */; };
+		AAE9BEDD29C95F2700D4D2E0 /* TrashCheckerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEDC29C95F2700D4D2E0 /* TrashCheckerView.swift */; };
+		AAE9BEE029C95F6B00D4D2E0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AAE9BEDF29C95F6B00D4D2E0 /* Alamofire */; };
+		AAE9BEE329C95F7A00D4D2E0 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAE9BEE229C95F7A00D4D2E0 /* SwiftyJSON */; };
+		AAE9BEE529C95FA500D4D2E0 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEE429C95FA500D4D2E0 /* LocationManager.swift */; };
+		AAE9BEE729C95FC700D4D2E0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEE629C95FC700D4D2E0 /* ImagePicker.swift */; };
+		AAE9BEE929C9602E00D4D2E0 /* LoadTrashData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEE829C9602E00D4D2E0 /* LoadTrashData.swift */; };
+		AAE9BEEC29C968B400D4D2E0 /* TrashMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEEB29C968B400D4D2E0 /* TrashMapView.swift */; };
+		AAE9BEEE29CA111200D4D2E0 /* SampleMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEED29CA111200D4D2E0 /* SampleMapView.swift */; };
+		AAE9BEF029CA51AA00D4D2E0 /* ObjectDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEEF29CA51AA00D4D2E0 /* ObjectDetectionView.swift */; };
+		AAE9BEF229CA51D300D4D2E0 /* ObjectDetector_CatsDogs_v2 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BEF129CA51D300D4D2E0 /* ObjectDetector_CatsDogs_v2 1.mlmodel */; };
+		AAE9BF1F29CE9D0100D4D2E0 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BF1E29CE9D0100D4D2E0 /* DataStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AAE9BEC729C95D5A00D4D2E0 /* TrashLocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashLocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE9BECA29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashLocationTrackerApp.swift; sourceTree = "<group>"; };
+		AAE9BECC29C95D5A00D4D2E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAE9BECE29C95D5B00D4D2E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAE9BED129C95D5B00D4D2E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAE9BED829C95D7D00D4D2E0 /* MultiTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiTabView.swift; sourceTree = "<group>"; };
+		AAE9BEDA29C95DA300D4D2E0 /* WebViewCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCore.swift; sourceTree = "<group>"; };
+		AAE9BEDC29C95F2700D4D2E0 /* TrashCheckerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashCheckerView.swift; sourceTree = "<group>"; };
+		AAE9BEE429C95FA500D4D2E0 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		AAE9BEE629C95FC700D4D2E0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		AAE9BEE829C9602E00D4D2E0 /* LoadTrashData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTrashData.swift; sourceTree = "<group>"; };
+		AAE9BEEA29C9664C00D4D2E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AAE9BEEB29C968B400D4D2E0 /* TrashMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashMapView.swift; sourceTree = "<group>"; };
+		AAE9BEED29CA111200D4D2E0 /* SampleMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMapView.swift; sourceTree = "<group>"; };
+		AAE9BEEF29CA51AA00D4D2E0 /* ObjectDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetectionView.swift; sourceTree = "<group>"; };
+		AAE9BEF129CA51D300D4D2E0 /* ObjectDetector_CatsDogs_v2 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "ObjectDetector_CatsDogs_v2 1.mlmodel"; sourceTree = "<group>"; };
+		AAE9BF1E29CE9D0100D4D2E0 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AAE9BEC429C95D5A00D4D2E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE9BEE329C95F7A00D4D2E0 /* SwiftyJSON in Frameworks */,
+				AAE9BEE029C95F6B00D4D2E0 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AAE9BEBE29C95D5A00D4D2E0 = {
+			isa = PBXGroup;
+			children = (
+				AAE9BEC929C95D5A00D4D2E0 /* TrashLocationTracker */,
+				AAE9BEC829C95D5A00D4D2E0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AAE9BEC829C95D5A00D4D2E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AAE9BEC729C95D5A00D4D2E0 /* TrashLocationTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AAE9BEC929C95D5A00D4D2E0 /* TrashLocationTracker */ = {
+			isa = PBXGroup;
+			children = (
+				AAE9BEEA29C9664C00D4D2E0 /* Info.plist */,
+				AAE9BECA29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift */,
+				AAE9BED829C95D7D00D4D2E0 /* MultiTabView.swift */,
+				AAE9BEED29CA111200D4D2E0 /* SampleMapView.swift */,
+				AAE9BF1E29CE9D0100D4D2E0 /* DataStore.swift */,
+				AAE9BEEF29CA51AA00D4D2E0 /* ObjectDetectionView.swift */,
+				AAE9BF1729CD206D00D4D2E0 /* LibrariesAndMLModels */,
+				AAE9BF1829CD208500D4D2E0 /* Deprecated */,
+				AAE9BECE29C95D5B00D4D2E0 /* Assets.xcassets */,
+				AAE9BED029C95D5B00D4D2E0 /* Preview Content */,
+			);
+			path = TrashLocationTracker;
+			sourceTree = "<group>";
+		};
+		AAE9BED029C95D5B00D4D2E0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AAE9BED129C95D5B00D4D2E0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AAE9BF1729CD206D00D4D2E0 /* LibrariesAndMLModels */ = {
+			isa = PBXGroup;
+			children = (
+				AAE9BEE629C95FC700D4D2E0 /* ImagePicker.swift */,
+				AAE9BEF129CA51D300D4D2E0 /* ObjectDetector_CatsDogs_v2 1.mlmodel */,
+				AAE9BEDA29C95DA300D4D2E0 /* WebViewCore.swift */,
+				AAE9BEE429C95FA500D4D2E0 /* LocationManager.swift */,
+			);
+			path = LibrariesAndMLModels;
+			sourceTree = "<group>";
+		};
+		AAE9BF1829CD208500D4D2E0 /* Deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				AAE9BECC29C95D5A00D4D2E0 /* ContentView.swift */,
+				AAE9BEE829C9602E00D4D2E0 /* LoadTrashData.swift */,
+				AAE9BEEB29C968B400D4D2E0 /* TrashMapView.swift */,
+				AAE9BEDC29C95F2700D4D2E0 /* TrashCheckerView.swift */,
+			);
+			path = Deprecated;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AAE9BEC629C95D5A00D4D2E0 /* TrashLocationTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAE9BED529C95D5B00D4D2E0 /* Build configuration list for PBXNativeTarget "TrashLocationTracker" */;
+			buildPhases = (
+				AAE9BEC329C95D5A00D4D2E0 /* Sources */,
+				AAE9BEC429C95D5A00D4D2E0 /* Frameworks */,
+				AAE9BEC529C95D5A00D4D2E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrashLocationTracker;
+			packageProductDependencies = (
+				AAE9BEDF29C95F6B00D4D2E0 /* Alamofire */,
+				AAE9BEE229C95F7A00D4D2E0 /* SwiftyJSON */,
+			);
+			productName = TrashLocationTracker;
+			productReference = AAE9BEC729C95D5A00D4D2E0 /* TrashLocationTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AAE9BEBF29C95D5A00D4D2E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					AAE9BEC629C95D5A00D4D2E0 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = AAE9BEC229C95D5A00D4D2E0 /* Build configuration list for PBXProject "TrashLocationTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AAE9BEBE29C95D5A00D4D2E0;
+			packageReferences = (
+				AAE9BEDE29C95F6B00D4D2E0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AAE9BEE129C95F7A00D4D2E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
+			productRefGroup = AAE9BEC829C95D5A00D4D2E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AAE9BEC629C95D5A00D4D2E0 /* TrashLocationTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AAE9BEC529C95D5A00D4D2E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE9BED229C95D5B00D4D2E0 /* Preview Assets.xcassets in Resources */,
+				AAE9BECF29C95D5B00D4D2E0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AAE9BEC329C95D5A00D4D2E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE9BED929C95D7D00D4D2E0 /* MultiTabView.swift in Sources */,
+				AAE9BECD29C95D5A00D4D2E0 /* ContentView.swift in Sources */,
+				AAE9BEE929C9602E00D4D2E0 /* LoadTrashData.swift in Sources */,
+				AAE9BEE529C95FA500D4D2E0 /* LocationManager.swift in Sources */,
+				AAE9BEF229CA51D300D4D2E0 /* ObjectDetector_CatsDogs_v2 1.mlmodel in Sources */,
+				AAE9BEE729C95FC700D4D2E0 /* ImagePicker.swift in Sources */,
+				AAE9BEDB29C95DA300D4D2E0 /* WebViewCore.swift in Sources */,
+				AAE9BF1F29CE9D0100D4D2E0 /* DataStore.swift in Sources */,
+				AAE9BECB29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift in Sources */,
+				AAE9BEDD29C95F2700D4D2E0 /* TrashCheckerView.swift in Sources */,
+				AAE9BEF029CA51AA00D4D2E0 /* ObjectDetectionView.swift in Sources */,
+				AAE9BEEC29C968B400D4D2E0 /* TrashMapView.swift in Sources */,
+				AAE9BEEE29CA111200D4D2E0 /* SampleMapView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AAE9BED329C95D5B00D4D2E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AAE9BED429C95D5B00D4D2E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AAE9BED629C95D5B00D4D2E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrashLocationTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = T4JB96P77H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrashLocationTracker/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For GPS location 2";
+				INFOPLIST_KEY_NSLocationUsageDescription = "For GPS location of trash seen";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For GPS Location 3";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = world.aiclub.TrashLocationTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AAE9BED729C95D5B00D4D2E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrashLocationTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = T4JB96P77H;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrashLocationTracker/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For GPS location 2";
+				INFOPLIST_KEY_NSLocationUsageDescription = "For GPS location of trash seen";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For GPS Location 3";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = world.aiclub.TrashLocationTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AAE9BEC229C95D5A00D4D2E0 /* Build configuration list for PBXProject "TrashLocationTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE9BED329C95D5B00D4D2E0 /* Debug */,
+				AAE9BED429C95D5B00D4D2E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAE9BED529C95D5B00D4D2E0 /* Build configuration list for PBXNativeTarget "TrashLocationTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE9BED629C95D5B00D4D2E0 /* Debug */,
+				AAE9BED729C95D5B00D4D2E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AAE9BEDE29C95F6B00D4D2E0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		AAE9BEE129C95F7A00D4D2E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AAE9BEDF29C95F6B00D4D2E0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAE9BEDE29C95F6B00D4D2E0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		AAE9BEE229C95F7A00D4D2E0 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAE9BEE129C95F7A00D4D2E0 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AAE9BEBF29C95D5A00D4D2E0 /* Project object */;
+}
