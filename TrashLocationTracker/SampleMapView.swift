@@ -14,6 +14,9 @@ import MapKit
 
 struct SampleMapView: View {
     @ObservedObject var locationManager : LocationManager
+    @EnvironmentObject var refreshManager: RefreshManager
+    
+    @State var tabClickCount=0
 
     
     func mapMidPointAndSpan() -> MKCoordinateRegion {
@@ -38,23 +41,33 @@ struct SampleMapView: View {
     
 
     var body: some View {
-       // Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.33233141, longitude: -122.0312186), span: MKCoordinateSpan(latitudeDelta: 10.5, longitudeDelta: 10.5))), showsUserLocation: true, annotationItems: annotations)
+        // Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.33233141, longitude: -122.0312186), span: MKCoordinateSpan(latitudeDelta: 10.5, longitudeDelta: 10.5))), showsUserLocation: true, annotationItems: annotations)
         VStack {
-            Text(DataStore.label)
-            Text("\(DataStore.lat)")
-            Text("\(DataStore.lon)")
+            Text("My map")
+                .font(.system(size: 42))
             Map(coordinateRegion: .constant(mapMidPointAndSpan()), showsUserLocation: true, annotationItems: DataStore.getAnnotations())
             { annotation in
                 MapAnnotation(coordinate: annotation.coordinate) {
                     VStack {
                         Text(annotation.title)
-                            .font(.headline)
-                        Text(annotation.subtitle)
-                            .font(.subheadline)
+                            .font(.system(size: 18))
+                        //Text(annotation.subtitle).font(.system(size: 18))
                     }
                 }
+            }
+            .onAppear {
+                        MKMapView.appearance().showsPointsOfInterest = false
+                    }
+            Button("Refresh") {
+                self.tabClickCount=self.tabClickCount+1
+                print("Tab refreshed")
+            }.padding(.all, 14.0)
+                .foregroundColor(.white)
+                .background(Color.green)
+                .cornerRadius(10)
+
         }
-        }
+
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AAD356C829D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AAD356C729D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel */; };
 		AAE9BECB29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BECA29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift */; };
 		AAE9BECD29C95D5A00D4D2E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BECC29C95D5A00D4D2E0 /* ContentView.swift */; };
 		AAE9BECF29C95D5B00D4D2E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE9BECE29C95D5B00D4D2E0 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AAD356C729D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TrashDetectionV1_1_Iteration_10000.mlmodel; sourceTree = "<group>"; };
 		AAE9BEC729C95D5A00D4D2E0 /* TrashLocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashLocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE9BECA29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashLocationTrackerApp.swift; sourceTree = "<group>"; };
 		AAE9BECC29C95D5A00D4D2E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,9 +83,9 @@
 				AAE9BEEA29C9664C00D4D2E0 /* Info.plist */,
 				AAE9BECA29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift */,
 				AAE9BED829C95D7D00D4D2E0 /* MultiTabView.swift */,
+				AAE9BEEF29CA51AA00D4D2E0 /* ObjectDetectionView.swift */,
 				AAE9BEED29CA111200D4D2E0 /* SampleMapView.swift */,
 				AAE9BF1E29CE9D0100D4D2E0 /* DataStore.swift */,
-				AAE9BEEF29CA51AA00D4D2E0 /* ObjectDetectionView.swift */,
 				AAE9BF1729CD206D00D4D2E0 /* LibrariesAndMLModels */,
 				AAE9BF1829CD208500D4D2E0 /* Deprecated */,
 				AAE9BECE29C95D5B00D4D2E0 /* Assets.xcassets */,
@@ -106,6 +108,7 @@
 				AAE9BEE629C95FC700D4D2E0 /* ImagePicker.swift */,
 				AAE9BEF129CA51D300D4D2E0 /* ObjectDetector_CatsDogs_v2 1.mlmodel */,
 				AAE9BEDA29C95DA300D4D2E0 /* WebViewCore.swift */,
+				AAD356C729D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel */,
 				AAE9BEE429C95FA500D4D2E0 /* LocationManager.swift */,
 			);
 			path = LibrariesAndMLModels;
@@ -206,6 +209,7 @@
 				AAE9BEE529C95FA500D4D2E0 /* LocationManager.swift in Sources */,
 				AAE9BEF229CA51D300D4D2E0 /* ObjectDetector_CatsDogs_v2 1.mlmodel in Sources */,
 				AAE9BEE729C95FC700D4D2E0 /* ImagePicker.swift in Sources */,
+				AAD356C829D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel in Sources */,
 				AAE9BEDB29C95DA300D4D2E0 /* WebViewCore.swift in Sources */,
 				AAE9BF1F29CE9D0100D4D2E0 /* DataStore.swift in Sources */,
 				AAE9BECB29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift in Sources */,
@@ -345,6 +349,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrashLocationTracker/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For GPS location 2";
 				INFOPLIST_KEY_NSLocationUsageDescription = "For GPS location of trash seen";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For GPS Location 3";
@@ -377,6 +382,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TrashLocationTracker/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For GPS location 2";
 				INFOPLIST_KEY_NSLocationUsageDescription = "For GPS location of trash seen";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For GPS Location 3";

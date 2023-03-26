@@ -12,11 +12,14 @@
 
 import SwiftUI
 
-import SwiftUI
+class RefreshManager: ObservableObject {
+    @Published var refreshTab: Int?
+}
 
 struct MultiTabView: View {
     
     @StateObject var locationManager = LocationManager()
+    @StateObject private var refreshManager = RefreshManager()
     
     @AppStorage("lat") var lat=0.0
     @AppStorage("lon") var lon=0.0
@@ -25,23 +28,27 @@ struct MultiTabView: View {
         ZStack {
             Color.blue.opacity(0.2).ignoresSafeArea()
             TabView{
-                /*
-                WebView(url:URL(string:"https://sites.google.com/students.harker.org/aquatamer/the-problem")!)
-                    .tabItem{
-                        Label("Drought",systemImage: "leaf.circle.fill")
-                    }
-                */
                 ObjectDetectionView()
                     .tabItem{
-                        Label("Picture",systemImage: "sprinkler.and.droplets.fill")
+                        Label("Detect trash",systemImage: "eye.circle.fill")
                     }
+                 /*
                 TrashMapView(locationManager: locationManager)
                     .tabItem{
                         Label("Weather",systemImage: "cloud.rain.circle")
                     }
+                */
                 SampleMapView(locationManager: locationManager)
+                    .environmentObject(refreshManager)
                     .tabItem{
-                        Label("Sample map",systemImage: "cloud.rain.circle")
+                        Label("Map",systemImage: "globe.americas.fill")
+                    }
+                    .onTapGesture {
+                                       refreshManager.refreshTab = 1
+                                   }
+                WebView(url:URL(string:"https://calrecycle.ca.gov/")!)
+                    .tabItem{
+                        Label("Recycle",systemImage: "arrow.3.trianglepath")
                     }
             }
         }

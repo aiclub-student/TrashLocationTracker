@@ -30,12 +30,15 @@ struct ObjectDetectionView: View {
             VStack (alignment: .center,
                     spacing: 20){
                 Text("Check for trash")
-                    .font(.system(.largeTitle, design: .rounded))
+                    .font(.system(size:42))
                     .fontWeight(.bold)
+                    .padding(10)
+                /*
                 if !detectedObjects.isEmpty {
                               Text("Detected Objects: \(detectedObjects.joined(separator: ", "))")
                           }
-                Text(resultText)
+                 */
+                //Text(resultText)
                 Image(uiImage: inputImage!).resizable()
                     .aspectRatio(contentMode: .fit)
                 Button("Is this trash?"){
@@ -45,7 +48,7 @@ struct ObjectDetectionView: View {
                 .foregroundColor(.white)
                 .background(Color.green)
                 .cornerRadius(10)
-                Text(DataStore.label)
+                //Text(DataStore.label)
             }
                     .font(.title)
         }.sheet(isPresented: $showingImagePicker, onDismiss: detectObjects) {
@@ -92,13 +95,15 @@ struct ObjectDetectionView: View {
             print("No image selected")
             return
         }
-        let model1=ObjectDetector_CatsDogs_v2_1().model
+        let model1=TrashDetectionV1_1_Iteration_10000().model
+        //let model1=ObjectDetector_CatsDogs_v2_1().model
         guard let model = try? VNCoreMLModel(for: model1) else {
                 fatalError("Failed to load Core ML model.")
             }
             let request = VNCoreMLRequest(model: model) { request, error in
                 guard let results = request.results as? [VNRecognizedObjectObservation], !results.isEmpty else {
-                    fatalError("Unexpected result type from VNCoreMLRequest.")
+                    print("Unexpected result type from VNCoreMLRequest.")
+                    return
                 }
                 // Draw bounding boxes around the detected objects
                 let imageSize = inputImage.size
@@ -140,19 +145,20 @@ struct ObjectDetectionView: View {
             context?.drawPath(using: .stroke)
             
             context?.setFillColor(UIColor.red.cgColor)
+            if ["plastic"].contains(label) {
+                DataStore.label=label
+                DataStore.seen=true
+            }
+            print("Object bounds are \(objectBounds) for label \(label) and label is \(label) and seen is \(DataStore.seen)")
             
-            DataStore.label=label
-            DataStore.seen=true
-            print("Object bounds are \(objectBounds) for label \(label) and label is \(DataStore.label)")
-            
-            let labelRect = CGRect(x: objectBounds.origin.x, y: max(objectBounds.origin.y - 105,0), width: objectBounds.width, height: 105)
+            let labelRect = CGRect(x: objectBounds.origin.x, y: max(objectBounds.origin.y - 55,0), width: objectBounds.width, height: 55)
             context?.fill(labelRect)
             
             context?.setFillColor(UIColor.black.cgColor)
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.alignment = .center
             let labelFontAttributes = [
-                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 72),
+                NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 24),
                 NSAttributedString.Key.paragraphStyle: paragraphStyle,
                 NSAttributedString.Key.foregroundColor: UIColor.black,
             ]

@@ -24,9 +24,11 @@ class DataStore {
     
     
     static var annotations = [
-        Annotation(coordinate: CLLocationCoordinate2D(latitude: 37.33233141, longitude: -122.0312186), title: "Apple Park", subtitle: " "),
-        Annotation(coordinate: CLLocationCoordinate2D(latitude: 37.773972, longitude: -122.431297), title: "Golden Gate Bridge", subtitle: " "),
-        Annotation(coordinate: CLLocationCoordinate2D(latitude: 47.606209, longitude: -122.332071), title: "Space Needle", subtitle: " ")
+        Annotation(coordinate: CLLocationCoordinate2D(latitude: 37.33233141, longitude: -122.0312186), title: "plastic", subtitle: " "),
+        Annotation(coordinate: CLLocationCoordinate2D(latitude: 37.773972, longitude: -122.431297), title: "paper", subtitle: " "),
+        //Annotation(coordinate: CLLocationCoordinate2D(latitude: 47.606209, longitude: -122.332071), title: "Space Needle", subtitle: " "),
+        Annotation(coordinate: CLLocationCoordinate2D(latitude: 37.689294003925625, longitude: -121.70600762975174), title: "cardboard", subtitle: " ")
+        // 37.689294003925625, -121.70600762975174
     ]
     
     static func getAnnotations() -> [Annotation] {
