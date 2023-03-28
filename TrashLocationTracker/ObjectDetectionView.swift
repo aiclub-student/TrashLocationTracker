@@ -20,6 +20,7 @@ struct ObjectDetectionView: View {
     @State private var inputImage: UIImage? = UIImage(named:"trash")
     
     @State var detectedObjects: [String] = []
+    @EnvironmentObject var refreshManager:RefreshManager
     
     
     //@State private var image: UIImage?
@@ -119,6 +120,7 @@ struct ObjectDetectionView: View {
                 
                 DispatchQueue.main.async {
                     self.inputImage = inputImage
+                    self.refreshManager.refreshTab += 1
                     self.detectedObjects = results.map { observation in
                         return observation.labels[0].identifier
                     }

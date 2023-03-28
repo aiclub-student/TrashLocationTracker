@@ -13,13 +13,17 @@
 import SwiftUI
 
 class RefreshManager: ObservableObject {
-    @Published var refreshTab: Int?
+    @Published var refreshTab: Int
+    
+    init(refreshTab: Int) {
+        self.refreshTab = refreshTab
+    }
 }
 
 struct MultiTabView: View {
     
     @StateObject var locationManager = LocationManager()
-    @StateObject private var refreshManager = RefreshManager()
+    @EnvironmentObject var refreshManager:RefreshManager
     
     @AppStorage("lat") var lat=0.0
     @AppStorage("lon") var lon=0.0
@@ -44,7 +48,7 @@ struct MultiTabView: View {
                         Label("Map",systemImage: "globe.americas.fill")
                     }
                     .onTapGesture {
-                                       refreshManager.refreshTab = 1
+                                       //refreshManager.refreshTab = 1
                                    }
                 WebView(url:URL(string:"https://calrecycle.ca.gov/")!)
                     .tabItem{
