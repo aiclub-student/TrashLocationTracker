@@ -21,6 +21,8 @@ class DataStore {
     static var lat: Double = 0.0
     static var lon: Double = 0.0
     static var seen: Bool = false
+    static var updatedImage=UIImage(named: "trash")
+    static var mapScreen:UIImage? = nil
     
     
     static var annotations = [

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AABBD56829DCC683001865B0 /* EmaiLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBD56729DCC683001865B0 /* EmaiLView.swift */; };
 		AAD356C829D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = AAD356C729D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel */; };
 		AAE9BECB29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BECA29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift */; };
 		AAE9BECD29C95D5A00D4D2E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9BECC29C95D5A00D4D2E0 /* ContentView.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AABBD56729DCC683001865B0 /* EmaiLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmaiLView.swift; sourceTree = "<group>"; };
 		AAD356C729D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TrashDetectionV1_1_Iteration_10000.mlmodel; sourceTree = "<group>"; };
 		AAE9BEC729C95D5A00D4D2E0 /* TrashLocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrashLocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE9BECA29C95D5A00D4D2E0 /* TrashLocationTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashLocationTrackerApp.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				AAE9BED829C95D7D00D4D2E0 /* MultiTabView.swift */,
 				AAE9BEEF29CA51AA00D4D2E0 /* ObjectDetectionView.swift */,
 				AAE9BEED29CA111200D4D2E0 /* SampleMapView.swift */,
+				AABBD56729DCC683001865B0 /* EmaiLView.swift */,
 				AAE9BF1E29CE9D0100D4D2E0 /* DataStore.swift */,
 				AAE9BF1729CD206D00D4D2E0 /* LibrariesAndMLModels */,
 				AAE9BF1829CD208500D4D2E0 /* Deprecated */,
@@ -207,6 +210,7 @@
 				AAE9BECD29C95D5A00D4D2E0 /* ContentView.swift in Sources */,
 				AAE9BEE929C9602E00D4D2E0 /* LoadTrashData.swift in Sources */,
 				AAE9BEE529C95FA500D4D2E0 /* LocationManager.swift in Sources */,
+				AABBD56829DCC683001865B0 /* EmaiLView.swift in Sources */,
 				AAE9BEF229CA51D300D4D2E0 /* ObjectDetector_CatsDogs_v2 1.mlmodel in Sources */,
 				AAE9BEE729C95FC700D4D2E0 /* ImagePicker.swift in Sources */,
 				AAD356C829D00ABA001F0DC9 /* TrashDetectionV1_1_Iteration_10000.mlmodel in Sources */,
@@ -353,6 +357,8 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For GPS location 2";
 				INFOPLIST_KEY_NSLocationUsageDescription = "For GPS location of trash seen";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For GPS Location 3";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access photo library";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -386,6 +392,8 @@
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For GPS location 2";
 				INFOPLIST_KEY_NSLocationUsageDescription = "For GPS location of trash seen";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For GPS Location 3";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Access photo library";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

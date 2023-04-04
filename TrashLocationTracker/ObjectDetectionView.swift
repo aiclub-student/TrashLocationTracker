@@ -125,6 +125,7 @@ struct ObjectDetectionView: View {
                         return observation.labels[0].identifier
                     }
                     self.drawBoundingBoxes(on: &self.inputImage, with: objectBoundsAndLabels)
+                    DataStore.updatedImage=self.inputImage
                 }
             }
             let handler = VNImageRequestHandler(cgImage: inputImage.cgImage!)

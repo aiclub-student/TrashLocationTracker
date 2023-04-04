@@ -17,6 +17,12 @@ struct SampleMapView: View {
     @EnvironmentObject var refreshManager: RefreshManager
     
     @State var tabClickCount=0
+    @State var showEmail=false
+    
+    @State var recipients = ["amit@gprof.com"]
+    @State var subject = "My email subject"
+    @State var msgbody = "This is my email body for the trash location system"
+    //@State var image = UIImage(named: "trash")
 
     
     func mapMidPointAndSpan() -> MKCoordinateRegion {
@@ -39,6 +45,32 @@ struct SampleMapView: View {
         return MKCoordinateRegion(center:CLLocationCoordinate2D(latitude: mid_lat, longitude: mid_lon),span:MKCoordinateSpan(latitudeDelta: span_lat, longitudeDelta: span_lon))
     }
     
+    func createMapImage() -> UIImage {
+        let mapSnapshotOptions = MKMapSnapshotter.Options()
+        mapSnapshotOptions.region = mapMidPointAndSpan()
+        mapSnapshotOptions.scale = UIScreen.main.scale
+        mapSnapshotOptions.size = CGSize(width: 300, height: 300)
+        mapSnapshotOptions.showsBuildings = false
+        //mapSnapshotOptions.showsPointsOfInterest = false
+        
+        let snapshotter = MKMapSnapshotter(options: mapSnapshotOptions)
+        var image: UIImage!
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        snapshotter.start(with: DispatchQueue.global(qos: .userInitiated)) { snapshot, error in
+            guard let snapshot = snapshot, error == nil else {
+                print("Error taking snapshot: \(error?.localizedDescription ?? "unknown error")")
+                return
+            }
+            
+            image = snapshot.image
+            semaphore.signal()
+        }
+        
+        _ = semaphore.wait(timeout: .distantFuture)
+        return image
+    }
+    
 
     var body: some View {
         // Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.33233141, longitude: -122.0312186), span: MKCoordinateSpan(latitudeDelta: 10.5, longitudeDelta: 10.5))), showsUserLocation: true, annotationItems: annotations)
@@ -58,14 +90,24 @@ struct SampleMapView: View {
             .onAppear {
                         MKMapView.appearance().showsPointsOfInterest = false
                     }
-            Button("Refresh") {
+            Button("Notify Authorities") {
                 self.tabClickCount=self.tabClickCount+1
-                print("Tab refreshed")
+                print("Notify authoritites")
+                let renderer = UIGraphicsImageRenderer(bounds: UIScreen.main.bounds)
+                let screenshot = renderer.image { context in
+                                    UIApplication.shared.windows.first?.rootViewController?.view.drawHierarchy(in: UIScreen.main.bounds, afterScreenUpdates: true)
+                                }
+                DataStore.mapScreen=screenshot
+                //DataStore.mapScreen=createMapImage()
+                
+                showEmail = true
             }.padding(.all, 14.0)
                 .foregroundColor(.white)
                 .background(Color.green)
                 .cornerRadius(10)
 
+        }.sheet(isPresented: $showEmail) {
+            EmailView(recipients: recipients, subject: subject, body: msgbody, image: DataStore.updatedImage, mapImage: DataStore.mapScreen)
         }
 
     }
