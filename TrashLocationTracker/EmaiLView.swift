@@ -21,7 +21,8 @@ struct EmailView: UIViewControllerRepresentable {
         mailComposeViewController.mailComposeDelegate = context.coordinator
         mailComposeViewController.setToRecipients(recipients)
         mailComposeViewController.setSubject(subject)
-        mailComposeViewController.setMessageBody(body, isHTML: false)
+        let emailMsg=body+"<p>Location: \(DataStore.lat),\(DataStore.lon)"+"\n\n<p> <a href=\"https://www.google.com/maps/@\(DataStore.lat),\(DataStore.lon),10z\">Map</a>\n"
+        mailComposeViewController.setMessageBody(emailMsg, isHTML: true)
         
         // Convert UIImage to NSData
         if let imageData = image.flatMap({ $0.pngData() }) {

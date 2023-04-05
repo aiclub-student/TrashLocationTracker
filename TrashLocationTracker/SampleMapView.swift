@@ -21,7 +21,7 @@ struct SampleMapView: View {
     
     @State var recipients = ["amit@gprof.com"]
     @State var subject = "My email subject"
-    @State var msgbody = "This is my email body for the trash location system"
+    @State var msgbody = "<p>This is my email body for the trash location system.</p>"
     //@State var image = UIImage(named: "trash")
 
     
@@ -82,13 +82,14 @@ struct SampleMapView: View {
                 MapAnnotation(coordinate: annotation.coordinate) {
                     VStack {
                         Text(annotation.title)
-                            .font(.system(size: 18))
+                            .font(.system(size: 24))
                         //Text(annotation.subtitle).font(.system(size: 18))
                     }
                 }
             }
             .onAppear {
-                        MKMapView.appearance().showsPointsOfInterest = false
+                MKMapView.appearance().mapType = .mutedStandard
+                MKMapView.appearance().pointOfInterestFilter = .excludingAll
                     }
             Button("Notify Authorities") {
                 self.tabClickCount=self.tabClickCount+1
